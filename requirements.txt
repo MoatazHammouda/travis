@@ -1,7 +1,5 @@
 astroid==2.7.3
 attrs==21.2.0
-# Editable install with no version control (Branch-WAN-SDWAN-DB-APIs==0.0.0)
--e /Users/moahammo/PycharmProjects/devNet_exam
 certifi==2021.5.30
 charset-normalizer==2.0.4
 click==8.0.1
