@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-import database
 import pytest
+import database
 
 # Starting with a fixture that automatically runs before each test
 @pytest.fixture

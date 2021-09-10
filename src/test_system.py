@@ -53,4 +53,4 @@ def _post_acct(acct):
         if balance:
             assert f"Account balance: {balance}" in resp.text
         else:
-            assert f"Unknown account number" in resp.text
+            assert "Unknown account number" in resp.text
