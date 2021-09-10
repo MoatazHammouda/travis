@@ -1,0 +1,28 @@
+---
+# Use a python-based system in a 3.8 venv
+# xenial must be used with python3.7 or newer
+dist: "xenial"
+language: "python"
+python:
+  - "3.8"
+
+# Need docker and docker-compose support
+services:
+  - "docker"
+
+install:
+  - "pip install -r requirements.txt"
+
+before_script:
+  - "pylint src/*.py"
+  - "pytest --verbose src/test_unit.py"
+  - "docker-compose up --detach"
+  - "docker container ls"
+
+script:
+  - "pytest --verbose src/test_system.py"
+
+after_script:
+  - "docker-compose down"
+
+
