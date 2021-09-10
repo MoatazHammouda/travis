@@ -14,7 +14,6 @@ install:
   - "pip install -r requirements.txt"
 
 before_script:
-  - "pylint src/*.py"
   - "pytest --verbose src/test_unit.py"
   - "docker-compose up --detach"
   - "docker container ls"
